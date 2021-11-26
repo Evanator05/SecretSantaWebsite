@@ -34,4 +34,16 @@ def makeUser(username, password, firstName, lastName, bio):
     }
     return user
 
+def generateUsers():
+    users = {"users": []}
+
+    users["users"].append(makeUser("evanator", "fart", "evan", "watson", "too true"))
+    users["users"].append(makeUser("artic0n", "lotion223", "aaron", "lottin", "Test test test test test test test test"))
+    users["users"].append(makeUser("shfeeny", "whatinmywhat", "ivan", "archipov", "league of legends more like league of legends more like league of legends more like "))
+
+    return users
+
+json_object = json.dumps(generateUsers())#make the dict a json file
+print(json_object)
+
 data = requests.post("https://evanator05.github.io/SecretSantaServer/json/users.json", json_object)
