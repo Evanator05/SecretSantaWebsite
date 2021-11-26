@@ -32,4 +32,13 @@ def makeUser(username, password, firstName, lastName, bio):
     }
     return user
 
-pprint(pullAPI())
+def barg():
+    users = {
+        "users": []
+    }
+    users["users"].append(makeUser("evanator", "fart", "evan", "watson", "too true"))
+    users["users"].append(makeUser("artic0n", "lotion223", "aaron", "lottin", "I love men and lol men men men"))
+    users["users"].append(makeUser("shfeeny", "whatinmywhat", "ivan", "tr54gfexdszretdgrte", "league"))
+
+    return users
+pprint(getUserIndex(barg(), "shfeeny"))
