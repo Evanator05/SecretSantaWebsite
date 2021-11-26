@@ -32,7 +32,7 @@ def makeUser(username, password, firstName, lastName, bio):
     }
     return user
 
-def barg():
+def generateUsers():
     users = {
         "users": []
     }
@@ -41,4 +41,6 @@ def barg():
     users["users"].append(makeUser("shfeeny", "whatinmywhat", "ivan", "tr54gfexdszretdgrte", "league"))
 
     return users
-pprint(getUserIndex(barg(), "shfeeny"))
+
+json_object = json.dumps(generateUsers())#make the dict a json file
+print(json_object)
