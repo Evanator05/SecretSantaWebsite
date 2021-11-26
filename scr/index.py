@@ -1,18 +1,20 @@
 from random import choice as randchoice
-import requests
 from pprint import pprint
+import json, hashlib, requests
 
 def pullAPI():
-    userData = requests.get("https://evanator05.github.io/SecretSantaServer/json/users.json")
-    data = userData.json()
-    pprint(data)
+    data = requests.get("https://evanator05.github.io/SecretSantaServer/json/users.json").json()#get json from website
+    return data
+    pprint(len(data["users"]))
 
-def getPairs(people):
-    pairs = dict()
-    for person in people:
-        pair = randchoice(people)
-        while pair == person:
-            pair = randchoice(people)
-        pairs[person] = pair
+def getUserIndex(data, name):
+    for i in range(len(data["users"])):
+        if data["users"][i]["name"]["username"] == name:
+            return i
 
-pullAPI()
+def encryptString(hash_string):
+    sha_signature = hashlib.sha256(hash_string.encode()).hexdigest()
+    return sha_signature
+
+
+with open('output.json', 'a') as out
