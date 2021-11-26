@@ -45,5 +45,4 @@ def generateUsers():
 json_object = json.dumps(generateUsers())#make the dict a json file
 print(json_object)
 
-
 data = requests.post("https://evanator05.github.io/SecretSantaServer/json/users.json", json_object)
