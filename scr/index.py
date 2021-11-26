@@ -32,4 +32,4 @@ def makeUser(username, password, firstName, lastName, bio):
     }
     return user
 
-pprint(makeUser("hi","abc","evan","watson","my name is evan and I love balls"))
+pprint(pullAPI())
