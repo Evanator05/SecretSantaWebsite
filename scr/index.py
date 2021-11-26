@@ -16,26 +16,25 @@ def getUserIndex(data, username):
         if data["users"][i]["name"]["username"] == username:
             return i
 
-def encryptString(hash_string):
+def encryptString(hash_string):#encrypt a string
     return hashlib.sha256(hash_string.encode()).hexdigest()
 
 def makeUser(username, password, firstName, lastName, bio):
-    user = {
+    user = {#make user JSON object
         "name": {
             "username": username,
             "firstName": firstName,
             "lastName": lastName
         },
         "target":"Picked December First",
-        "password": encryptString(password),
+        "password": encryptString(password),#password encrypted with sha256 making it uncrackable
         "bio": bio
     }
     return user
 
 def generateUsers():
-    users = {
-        "users": []
-    }
+    users = {"users": []}
+
     users["users"].append(makeUser("evanator", "fart", "evan", "watson", "too true"))
     users["users"].append(makeUser("artic0n", "lotion223", "aaron", "lottin", "I love men and lol men men men"))
     users["users"].append(makeUser("shfeeny", "whatinmywhat", "ivan", "tr54gfexdszretdgrte", "league"))
