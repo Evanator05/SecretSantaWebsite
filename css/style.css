@@ -1,0 +1,43 @@
+html {
+  background-image: url("../img/background.gif");
+  background-size: 100%;
+}
+
+body {
+
+  text-align: center;
+  background-color: powderblue;
+  border-radius: 25px;
+  margin: 5%;
+  padding: 2%;
+}
+
+.userName {
+  color: darkgreen;
+  font-size: 300%;
+  margin: 1%;
+}
+
+.realName {
+  color: red;
+  margin: 1%;
+}
+
+.target {
+  color: red;
+  margin-top: 2%;
+  font-size: 125%;
+  text-transform: uppercase;
+}
+
+.bio {
+  background-color: white;
+  background-image: url("../img/snow.gif");
+  background-size: 100%;
+  padding: 2%;
+  border-radius: 15px;
+  margin-left: 25%;
+  margin-right: 25%;
+
+  font-size: 150%;
+}
