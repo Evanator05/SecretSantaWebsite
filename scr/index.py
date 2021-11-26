@@ -4,7 +4,6 @@ import json, hashlib, requests
 
 def pullAPI():
     data = requests.get("https://evanator05.github.io/SecretSantaServer/json/users.json")
-    print(data)
     if data.status_code == 200:
         userData = data.json()
     else:
