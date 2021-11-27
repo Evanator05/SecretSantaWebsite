@@ -1,4 +1,5 @@
 import requests
+from util import Util
 
 class PullAPI:
 
@@ -12,3 +13,5 @@ class PullAPI:
             print('Endpoint did not connect')
             return None
         return userData
+
+requests.post("http://127.0.0.1:5000/", Util.makeUser("area51rocks", "cumnuts", "arend", "rea", "my name is arend and I love anime and balls"))
