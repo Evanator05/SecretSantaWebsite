@@ -13,6 +13,10 @@ body {
   padding: 4%;
 }
 
+.title {
+  font-size: 400%
+}
+
 .userName {
   color: darkgreen;
   font-size: 300%;
