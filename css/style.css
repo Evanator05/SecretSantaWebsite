@@ -4,12 +4,13 @@ html {
 }
 
 body {
-
   text-align: center;
   background-color: powderblue;
   border-radius: 25px;
-  margin: 5%;
-  padding: 2%;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 5%;
+  padding: 4%;
 }
 
 .userName {
@@ -40,4 +41,33 @@ body {
   margin-right: 25%;
 
   font-size: 150%;
+}
+
+.btn {
+  background: #0099ff;
+  background-image: -webkit-linear-gradient(top, #0099ff, #0a5f94);
+  background-image: -moz-linear-gradient(top, #0099ff, #0a5f94);
+  background-image: -ms-linear-gradient(top, #0099ff, #0a5f94);
+  background-image: -o-linear-gradient(top, #0099ff, #0a5f94);
+  background-image: linear-gradient(to bottom, #0099ff, #0a5f94);
+  -webkit-border-radius: 60;
+  -moz-border-radius: 60;
+  border-radius: 60px;
+  text-shadow: 1px 1px 3px #000000;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 10px 20px 10px 20px;
+  border: solid #000000 1px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #228bcc;
+  background-image: -webkit-linear-gradient(top, #228bcc, #1f6ea3);
+  background-image: -moz-linear-gradient(top, #228bcc, #1f6ea3);
+  background-image: -ms-linear-gradient(top, #228bcc, #1f6ea3);
+  background-image: -o-linear-gradient(top, #228bcc, #1f6ea3);
+  background-image: linear-gradient(to bottom, #228bcc, #1f6ea3);
+  text-decoration: none;
 }
