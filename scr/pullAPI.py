@@ -14,4 +14,4 @@ class PullAPI:
             return None
         return userData
 
-requests.post("http://127.0.0.1:5000/", Util.makeUser("area51rocks", "cumnuts", "arend", "rea", "my name is arend and I love anime and balls"))
+requests.post("http://192.168.1.70:25549/", Util.makeUser("antwon", "123ABCa", "david", "michchelcee", "I love femboys"))
