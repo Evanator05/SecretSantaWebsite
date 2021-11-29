@@ -43,7 +43,6 @@ function registerAccount() {
 
   if (password == confirmPassword) {
     user = makeUser(username, password, firstName, lastName, bio)
-    Http.open("POST", postURL)
-    Http.send(user)
+    $.post(postURL, user);
   }
 }
