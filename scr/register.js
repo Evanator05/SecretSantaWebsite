@@ -33,8 +33,6 @@ function makeUser(username, password, firstName, lastName, bio) {
       return user
 }
 
-
-
 function registerAccount() {
   let username = document.getElementById("username").value
   let firstName = document.getElementById("firstName").value
