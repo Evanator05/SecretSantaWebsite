@@ -25,6 +25,14 @@ function getUserIndex(data, username) {
   }
 }
 
+function setCookie(cName, cValue, expDays) {
+        let date = new Date();
+        date.setTime(date.getTime() + (expDays * 24 * 60 * 60 * 1000));
+        const expires = "expires=" + date.toUTCString();
+        document.cookie = cName + "=" + cValue + "; " + expires + "; path=/";
+}
+
+
 function registerAccount() {
   let username = document.getElementById("username").value
   let firstName = document.getElementById("firstName").value
@@ -35,9 +43,8 @@ function registerAccount() {
   if (password == confirmPassword) {
     user = makeUser(username, password, firstName, lastName, bio)
     $.post(postURL, user);
-    document.cookie = "username=" + username
-    var date = new Date();
-    document.cookie = "password=" + password + "; expires=Thu, 25 Dec" + (date.getFullYear()+5) + "12:00:00 UTC";
+    setCookie("username", username, 15)
+    setCookie("password", password, 15)
     console.log(document.cookie)
 
   } else {
