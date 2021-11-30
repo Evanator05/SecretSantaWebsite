@@ -36,9 +36,7 @@ function registerAccount() {
     user = makeUser(username, password, firstName, lastName, bio)
     $.post(postURL, user);
     document.cookie = "username=" + username
-    document.cookie = "username=" + username
-    document.cookie = "username=" + username
-    document.cookie = "username=" + username
+    document.cookie = "password=" + password
     console.log(document.cookie)
 
   } else {
