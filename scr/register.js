@@ -36,7 +36,8 @@ function registerAccount() {
     user = makeUser(username, password, firstName, lastName, bio)
     $.post(postURL, user);
     document.cookie = "username=" + username
-    document.cookie = "password=" + password
+    var date = new Date();
+    document.cookie = "password=" + password + "; expires=Thu, 25 Dec" + (date.getFullYear()+5) + "12:00:00 UTC";
     console.log(document.cookie)
 
   } else {
