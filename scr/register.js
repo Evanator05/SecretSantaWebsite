@@ -22,9 +22,7 @@ function makeUser(username, password, firstName, lastName, bio) {
         });
       }
 
-      function makeObject(password) {
-        user.password = password
-      }
+
 
       hash(password).then(value => makeObject(value))
       console.log(user)
