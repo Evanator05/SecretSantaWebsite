@@ -35,6 +35,12 @@ function registerAccount() {
   if (password == confirmPassword) {
     user = makeUser(username, password, firstName, lastName, bio)
     $.post(postURL, user);
+    document.cookie = "username=" + username
+    document.cookie = "username=" + username
+    document.cookie = "username=" + username
+    document.cookie = "username=" + username
+    console.log(document.cookie)
+
   } else {
     returnError("Passwords do not match")
   }
