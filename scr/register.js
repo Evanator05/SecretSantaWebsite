@@ -1,5 +1,5 @@
-var postURL = "http://192.168.1.70:25549/"
-var pullURL = "http://192.168.1.70:25550/users.json"
+var postURL = "http://50.99.113.163:25549/"
+var pullURL = "http://50.99.113.163:25550/users.json"
 
 function makeUser(username, password, firstName, lastName, bio) {
       var user = { //make user JSON object
